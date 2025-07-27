@@ -1,1 +1,12 @@
-
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<h2>Your Cart</h2>
+<ul>
+    <li th:each="item : ${cartItems}">
+        [[${item.product.name}]] - Quantity: [[${item.quantity}]]
+    </li>
+</ul>
+<a href="/checkout">Checkout</a>
+</body>
+</html>
